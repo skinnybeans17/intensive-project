@@ -71,6 +71,20 @@
 				color: #ecf4fc;
 			}
 
+			@keyframes move {
+				0% { left: 0; }
+				50% { left: 100%; }
+				100% { left: 0; }
+			}
+
+			#welcome img {
+				position: relative;
+				animation-name: move;
+				animation-duration: 3s;
+				animation-iteration-count: infinite;
+				animation: infinite;
+			}
+
 			#welcome > div {
 				position: relative;
 				left: 10px;
@@ -194,11 +208,13 @@
 				width: 300px;
 				transition: 400ms;
 				transform: scale(1) rotate(0);
+				margin-top: 30px;
 			}
 
 			.card:nth-child(3) img:hover {
 				width: 200px;
 				transform: scale(1.25); rotate: (12deg);
+				margin-top: 30px;
 			}
 
 			.card h3 {
@@ -264,6 +280,10 @@
 
 			#inspiration h2 {
 				font-size: 2em;
+			}
+
+			#inspiration p {
+				color: #4d7e54;
 			}
 
 			#inspiration > div > div:nth-child(1) {
