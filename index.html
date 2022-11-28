@@ -60,29 +60,34 @@
 				color: darkblue;
 			}
 
+			@keyframes move {
+				from {
+					background-position: 0 0;
+				}
+				to {
+					background-position: 100% 0;
+				}
+			}
+
+			#move-background {
+				position: relative;
+				animation-name: move;
+				animation-duration: 4s;
+				animation-iteration-count: infinite;
+				animation: infinite;
+			}
+
 			#welcome {
 				background-color: skyblue;
 				background-image: url(img/two-clouds.png);
 				background-size: 400px;
+				background-position: 0px 0px;
 				display: flex;
 				justify-content: center;
 				align-items: center;
 				font-size: 2em;
 				color: #ecf4fc;
-			}
-
-			@keyframes move {
-				0% { left: 0; }
-				50% { left: 100%; }
-				100% { left: 0; }
-			}
-
-			#welcome img {
-				position: relative;
-				animation-name: move;
-				animation-duration: 3s;
-				animation-iteration-count: infinite;
-				animation: infinite;
+				animation: move 4s linear infinite;
 			}
 
 			#welcome > div {
@@ -405,7 +410,7 @@
 			</nav>
 		
 			<section id="welcome">
-				<div data-aos="fade-up">
+				<div id="move" data-aos="fade-up">
 					<h2>Hello!</h2>
 					<p>Welcome to the new type of drone that will help out with your deliveries,</p>
 				</div>
